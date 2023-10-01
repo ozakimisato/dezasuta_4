@@ -1,0 +1,399 @@
+@charset "UTF-8";
+
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dl {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #4c4c4c;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/*以下から、書き始め*/
+
+/*ヘッダー*/
+
+body{
+    background-color: #E8D9BF  ;
+}
+
+.header{
+    position: relative; /*現在位置を基準に*/
+}
+
+.header-wrap{
+    display: flex; 
+    justify-content: space-between; /* ヘッダーのアイテムを中央に寄せる */
+    align-items: center; /* アイテムを1ブロックとして、中央付近にまとめる */
+    padding: 10px 6.53% 0.25%; /* アイテムの内側の余白を取る */
+    
+    /*ヘッダーの上にナビゲーションメニューとロゴを乗せる*/
+    position: absolute; /*ヘッダー位置基準からの絶対配置設定*/
+    /*具体的な位置の指定*/
+    top: 0;
+    left: 0;
+
+    /*positionの指定で横幅の設定が消えたので、設定しなおす*/
+    width: 100%; /*navの横幅100％*/
+    /*横幅とpaddingの設定で、横幅100％を超えているので、paddingの内側に6.53% 0.25%であることを指定する*/
+    box-sizing: border-box;
+}
+
+
+
+/*左上のDESIGNCAFEのロゴ*/
+.logo{ 
+    width: 226.7px; /*左上のDESIGNCAFEの横幅*/
+}
+
+.pc-nav ul{ 
+    display: flex; /*右上のナビゲーションメニューを並列に*/
+
+}
+
+/*右上のナビゲーションメニュー設定*/
+.pc-nav ul li{ 
+    width: 105px; /*1つ1つの横幅*/
+    text-align: center; /*1つ1つを真ん中配置*/
+    color: #fff; /*色*/
+    /*フォントの種類*/
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック ", "Yu Gothic ", sans-serif;
+    font-size: 18px; /*フォントサイズ*/
+    font-weight: bold; /*フォントの太さ*/
+    margin-right: 54px; /*フォント同士の隙間を右にマージン54px取る　マージンの計算方法105+105=210 264-210=54*/
+    font-feature-settings: "palt";
+
+} 
+
+.pc-nav ul li :last-child {  /*last-childの意味：最後の子要素に装飾する*/
+    margin-right: 0; /*ナビゲーションの一番右端のマージンを0にする*/
+
+}
+
+.slider img{  
+ /*ヘッダーのスライダー画像の幅を100％にして文字が飛び出さないようにする*/
+    width: 100%;
+}
+
+
+/*ヘッダーの下の文字の設定*/
+.font1-1 {
+    text-align:center; /*フォントを中央に配置*/
+    font-family: "游明朝", YuMincho; /*フォントの種類*/
+    font-size: 30px; /*フォントサイズ*/
+    color: #4F260B; /*フォント色*/
+    margin-top:101.7px ; /*文字上のマージンの幅101.7px取っていく　107-5.3=101.7px*/
+    margin-bottom: 57.7px; /*文字下のマージンの幅101.7px取っていく 63-5.3=57.7px*/
+    font-feature-settings: "palt"; /*フォント間*/
+
+}
+
+/*font1の下の文字の設定*/
+.font2-1 p{
+    text-align:center; /*フォントを中央に配置*/
+    font-family: "游明朝", YuMincho; /*フォントの種類*/
+    font-size: 82px; /*フォントサイズ*/
+    line-height: 0.85; /*2行以上のフォントの間*/
+    color: #4F260B; /*フォント色*/
+    margin-bottom: 50px; /*文字下のマージンの幅101.7px取っていく 63-5.3=57.7px*/
+    font-feature-settings: "palt"; /*フォント間*/
+
+}
+
+/*font2の下の文字の設定*/
+.font3-1 p{
+    text-align:center; /*フォントを中央に配置*/
+    font-family: "游明朝", YuMincho; /*フォントの種類*/
+    font-size: 23px; /*フォントサイズ*/
+    color: #4F260B; /*フォント色*/
+    font-feature-settings: "palt"; /*フォント間*/
+}
+
+
+/*ABOUT ASの文字と糧の写真の設定*/
+.img2{
+    max-width: 1000px;
+    margin-top:101px ; /*(仮）の数値！！！！文字上のマージンの幅*/
+    margin-bottom: 104px; /*(仮）の数値！！！！文字下のマージンの幅*/
+}
+
+
+
+.img2 ul{
+    display: flex;  /*アイテムを並列に並べる*/
+    align-items: center;  /*アイテムを真ん中にする*/
+    margin: 0 auto;
+
+
+}
+
+.img2 li{
+    margin-left: 84px; /*(仮）の数値！！！！　文字と写真のマージンの幅*/
+
+}
+
+h2{
+    font-size: 44px; /*フォントサイズ*/
+    color: #4F260B; /*フォント色*/
+    font-family: "游明朝", YuMincho; /*フォントの種類*/
+
+}
+
+p{
+    font-size: 16px; /*フォントサイズ*/
+    color: #4F260B; /*フォント色*/
+    font-family: "游明朝", YuMincho; /*フォントの種類*/
+}
+
+
+/*MENUと写真の部分の設定*/
+.menu{
+    margin: 20px; 
+
+}
+
+.menu p{
+    text-align:center; /*MENUのフォントを中央に配置*/
+}
+
+.menufont ul{
+    display: flex; /*３つの写真と文字を並列に並べる*/
+    margin: 0 auto; 
+}
+
+.menufont li{
+    margin: 20px; /*(仮）の数値！！！！3つの写真のマージンの幅*/
+}
+
+h3{
+    font-size: 38px; /*フォントサイズ*/
+    color: #D30202; /*フォント色*/
+    margin-left: 10px; /*文字と写真のマージンの幅*/
+    margin-bottom: 10px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
+    font-family: "游明朝", YuMincho; /*フォントの種類*/
+
+}
+
+.menufont p{
+    font-size: 17px; /*フォントサイズ*/
+    color: #4F260B; /*フォント色*/
+    margin-top:20px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
+    margin-bottom: 95px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
+    font-family: "游明朝", YuMincho; /*フォントの種類*/
+
+
+}
+
+/*GALLERY（フォント）部分の設定*/
+.galleryfont p{
+    text-align:center; /*MENUのフォントを中央に配置*/
+}
+
+
+/*GALLERY（写真）部分の設定*/
+.gallery li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 68px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
+    width: 384px;
+    height:300px;
+
+}
+
+/*EVENT部分の設定*/
+.eventfont p{
+    text-align:center; /*EVENTのフォントを中央に配置*/
+}
+
+
+/*EVENT（フォント）部分の設定*/
+.event ul{
+    text-align:center; /*フォントを中央に配置*/
+    margin-top:42px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
+    margin-bottom: 77px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
+    width: 1000px;
+    height:200px;
+    padding: 41px 100px 41px 100px;
+    background-color: #fff; border-style: solid; border-color: #4F260B;
+}
+
+.event li{
+
+    font-size: 23px; /*フォントサイズ*/
+    color: #4F260B; /*フォント色*/
+    font-family: "游明朝", YuMincho; /*フォントの種類*/
+}
+
+
+
+/*Access部分の設定*/
+.accessfont p{
+    text-align:center; /*Accessのフォントを中央に配置*/
+    margin-bottom: 47px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
+
+}
+
+.access{
+    margin-bottom: 100px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
+}
+
+/*footer部分の設定*/
+
+.footer-wrap{
+   display: flex;
+}
+
+.footer-wrap p{
+    width: 361;
+    margin-left: 355px; /*(仮）の数値！！！！左側からとったdesign_cafeのマージンの幅*/
+}
+
+.footer-wrap ul{
+    margin-left: 40px; /*(仮）の数値！！！！design_cafeと住所のマージンの幅*/
+}
+
+.footer1{
+    font-size: 20px; /*フォントサイズ*/
+    color: #000000; /*フォント色*/
+    font-family: "游明朝", YuMincho; /*フォントの種類*/
+    
+}
+
+.footer2{
+    text-align:center; /*フォントを中央に配置*/
+    font-size: 16px; /*フォントサイズ*/
+    color: #000000; /*フォント色*/
+    font-family: "游明朝", YuMincho; /*フォントの種類*/
+    margin-top: 82px; /*(仮）の数値！！！！住所と＠のマージンの幅*/
+    margin-bottom: 80px; /*(仮）の数値！！！！＠と下とのマージンの幅*/
+}
+
+/*PAGETOP部分の設定*/
+.pagetop p { /*PAGETOP部分を右下に設置*/
+    width: 125px;
+    height:125px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+
+}
+
+
+
+/*ハンバーガーメニューの部分の設定*/
+
+@media screen and (max-width: 1100px){
+    .pc-nav{
+     display:none;
+   }
+ 
+    .hamburger {
+       display: block;
+       position: absolute;
+       top: 20px;
+       right: 10px;
+       cursor: pointer;
+       height: 33px;
+       z-index: 9999;
+     }
+ 
+     .hamburger span {
+         background: #fff;
+         width: 33px;
+         height: 3px;
+         display: block;
+         position: relative;
+         top: 10px;
+         transition: 0.3s;
+       
+     }
+ 
+     .hamburger span::before,
+     .hamburger span::after {
+         content: '';
+         background: #fff;
+         width: 33px;
+         height: 3px;
+         display: block;
+         position: absolute;
+         transition: 0.3s;
+     }
+ 
+     .hamburger span::before{
+         top: 10px;
+     }
+ 
+     .hamburger span::after{
+         bottom: 10px;
+     }
+ 
+     .open span{
+         background: transparent;
+     }
+ 
+     .open span::before{
+         top: 10px;
+         transform: rotate(45deg);
+     }
+ 
+     .open span::after{
+         bottom: 0px;
+         transform: rotate(135deg);
+     }
+ 
+     .sp-nav {
+         height: 100vh;
+         background: rgba(0, 0, 0, 0.8);
+         width: 100%;
+         position: absolute;
+         top: 0;
+         left: 0;
+ 
+     }
+ 
+
+     .sp-nav ul li{
+         color: #fff;
+         font-size: 18px;
+         text-align: center;
+         padding: 15px 0;
+         font-family:"游ゴシック体", YuGothic, "游ゴシック Medium",
+         "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif; ;
+ 
+     }
+ 
+ 
+ 
+ }
+ 
