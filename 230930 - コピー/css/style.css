@@ -95,7 +95,7 @@ body{
 
 } 
 
-.pc-nav ul li :last-child {  /*last-childの意味：最後の子要素に装飾する*/
+.pc-nav ul li:last-child {  /*last-childの意味：最後の子要素に装飾する*/
     margin-right: 0; /*ナビゲーションの一番右端のマージンを0にする*/
 
 }
@@ -105,6 +105,9 @@ body{
     width: 100%;
 }
 
+.sp-nav{
+    display: none;
+}
 
 /*ヘッダーの下の文字の設定*/
 .font1-1 {
@@ -143,10 +146,15 @@ body{
 /*ABOUT ASの文字と糧の写真の設定*/
 .img2{
     max-width: 1000px;
-    margin-top:101px ; /*(仮）の数値！！！！文字上のマージンの幅*/
-    margin-bottom: 104px; /*(仮）の数値！！！！文字下のマージンの幅*/
+    /* margin-top:101px ; (仮）の数値！！！！文字上のマージンの幅 */
+    /* margin-bottom: 104px; (仮）の数値！！！！文字下のマージンの幅 */
+    margin: 101px auto 104px; 
 }
 
+.about-img{
+    border-bottom-right-radius: 50px;
+
+}
 
 
 .img2 ul{
@@ -159,6 +167,7 @@ body{
 
 .img2 li{
     margin-left: 84px; /*(仮）の数値！！！！　文字と写真のマージンの幅*/
+    width: 320px;
 
 }
 
@@ -176,6 +185,8 @@ p{
 }
 
 
+
+
 /*MENUと写真の部分の設定*/
 .menu{
     margin: 20px; 
@@ -188,11 +199,22 @@ p{
 
 .menufont ul{
     display: flex; /*３つの写真と文字を並列に並べる*/
-    margin: 0 auto; 
+    max-width: 1000px;
+    width: 30%;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    
+
 }
 
 .menufont li{
     margin: 20px; /*(仮）の数値！！！！3つの写真のマージンの幅*/
+}
+
+.menu-img{
+    border-top-right-radius: 30px;
+
 }
 
 h3{
@@ -223,28 +245,33 @@ h3{
 /*GALLERY（写真）部分の設定*/
 .gallery li{
     display: flex;
-    align-items: center;
-    margin-bottom: 68px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
-    width: 384px;
-    height:300px;
+    /* align-items: center; */
+    /* margin-bottom: 68px; (仮）の数値！！！！文字と写真のマージンの幅 */
+    /* width: 384px;
+    height:300px; */
+    max-width: 1000px;
+    margin: 0 auto;
 
 }
 
 /*EVENT部分の設定*/
 .eventfont p{
     text-align:center; /*EVENTのフォントを中央に配置*/
+    margin: 0 auto;
 }
 
 
 /*EVENT（フォント）部分の設定*/
 .event ul{
     text-align:center; /*フォントを中央に配置*/
-    margin-top:42px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
-    margin-bottom: 77px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
-    width: 1000px;
+    /* margin-top:42px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
+    /* margin-bottom: 77px; (仮）の数値！！！！文字と写真のマージンの幅 */ 
+    margin: 42px auto 77px;
+    max-width: 1000px;
     height:200px;
     padding: 41px 100px 41px 100px;
     background-color: #fff; border-style: solid; border-color: #4F260B;
+    box-sizing: border-box;
 }
 
 .event li{
@@ -263,14 +290,18 @@ h3{
 
 }
 
-.access{
-    margin-bottom: 100px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
+iframe{
+    width: 100%;
+    height: 470px;
 }
+
 
 /*footer部分の設定*/
 
 .footer-wrap{
    display: flex;
+   padding-top: 100px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
+   background-color: #fff;
 }
 
 .footer-wrap p{
@@ -318,7 +349,7 @@ h3{
      display:none;
    }
  
-    .hamburger {
+    .humburger {
        display: block;
        position: absolute;
        top: 20px;
@@ -328,7 +359,7 @@ h3{
        z-index: 9999;
      }
  
-     .hamburger span {
+     .humburger span {
          background: #fff;
          width: 33px;
          height: 3px;
@@ -339,8 +370,8 @@ h3{
        
      }
  
-     .hamburger span::before,
-     .hamburger span::after {
+     .humburger span::before,
+     .humburger span::after {
          content: '';
          background: #fff;
          width: 33px;
@@ -350,11 +381,11 @@ h3{
          transition: 0.3s;
      }
  
-     .hamburger span::before{
+     .humburger span::before{
          top: 10px;
      }
  
-     .hamburger span::after{
+     .humburger span::after{
          bottom: 10px;
      }
  
@@ -363,7 +394,7 @@ h3{
      }
  
      .open span::before{
-         top: 10px;
+         top: 0px;
          transform: rotate(45deg);
      }
  
