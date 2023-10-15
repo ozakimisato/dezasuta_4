@@ -153,6 +153,7 @@ body{
 
 .about-img{
     border-bottom-right-radius: 50px;
+    width: 50%;
 
 }
 
@@ -161,13 +162,10 @@ body{
     display: flex;  /*アイテムを並列に並べる*/
     align-items: center;  /*アイテムを真ん中にする*/
     margin: 0 auto;
-
-
 }
 
 .img2 li{
-    margin-left: 84px; /*(仮）の数値！！！！　文字と写真のマージンの幅*/
-    width: 320px;
+    width: 410px;
 
 }
 
@@ -193,6 +191,10 @@ p{
 
 }
 
+.menu img{
+    width: 215px;
+}
+
 .menu p{
     text-align:center; /*MENUのフォントを中央に配置*/
 }
@@ -200,21 +202,16 @@ p{
 .menufont ul{
     display: flex; /*３つの写真と文字を並列に並べる*/
     max-width: 1000px;
-    width: 30%;
     justify-content: space-between;
     margin: 0 auto;
-
-    
-
 }
 
 .menufont li{
-    margin: 20px; /*(仮）の数値！！！！3つの写真のマージンの幅*/
+    width: 30%; 
 }
 
-.menu-img{
+.menufont img{
     border-top-right-radius: 30px;
-
 }
 
 h3{
@@ -263,7 +260,6 @@ h3{
 
 /*EVENT（フォント）部分の設定*/
 .event ul{
-    text-align:center; /*フォントを中央に配置*/
     /* margin-top:42px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
     /* margin-bottom: 77px; (仮）の数値！！！！文字と写真のマージンの幅 */ 
     margin: 42px auto 77px;
@@ -298,15 +294,19 @@ iframe{
 
 /*footer部分の設定*/
 
+.footer{
+    background-color: #fff;
+}
+
 .footer-wrap{
    display: flex;
    padding-top: 100px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
-   background-color: #fff;
+   max-width: 1000px;
+   margin: auto;
 }
 
 .footer-wrap p{
-    width: 361;
-    margin-left: 355px; /*(仮）の数値！！！！左側からとったdesign_cafeのマージンの幅*/
+    width: 361px;
 }
 
 .footer-wrap ul{
